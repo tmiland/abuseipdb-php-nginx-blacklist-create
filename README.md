@@ -15,7 +15,7 @@ Creates a blacklist file for use in your Nginx configuration.
 
 6. At this point you should have a file named "nginx-abuseipdb-blacklist.conf" in the directory. It should contain a list of IP addresses on each line. For example, "deny ##.##.##.##;"
 
-7. Add the following line to you nginx.conf file:
+7. Add the following line near the top of the http section in your nginx.conf file:
 ```
     http {
             ## Block spammers and other unwanted visitors  ##
