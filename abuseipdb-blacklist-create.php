@@ -22,7 +22,9 @@ if (isset($object -> errors) || !$object || empty($object)) {
 
 $response = null;
 foreach ($object -> data as $key => $values) {
-    $response .= "deny ".$values -> ipAddress.";".PHP_EOL;
+    if ($values -> abuseConfidenceScore >= ABUSE_IP_DB_CONFIDENCE_LIMIT) {
+        $response .= "deny ".$values -> ipAddress.";".PHP_EOL;
+    }
 }
 
 file_put_contents(__DIR__."/nginx-abuseipdb-blacklist.conf", $response);
