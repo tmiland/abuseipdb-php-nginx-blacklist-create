@@ -9,7 +9,7 @@ Creates a blacklist file for use in your Nginx configuration. Please see www.abu
 
 3. cd into abuseipdb-php-nginx-blacklist-create/ directory.
 
-4. Copy config.dist.php to config.php and insert your key into the define('ABUSE_IP_DB_KEY', '<KEY HERE>'); block.
+4. Copy config.dist.php to config.php and insert your key into the define('ABUSE_IP_DB_KEY', '<KEY HERE>'); block. Set the define('ABUSE_CONFIDENCE_SCORE', 80); to your liking.
 
 5. Run the script using sudo or change to the root user and run the script, "php abuseipdb-blacklist-create.php"
 
@@ -19,13 +19,13 @@ Creates a blacklist file for use in your Nginx configuration. Please see www.abu
 ```
     http {
             .....
-            
+
             ## Block spammers and other unwanted visitors  ##
             include abuseipdb-php-nginx-blacklist-create/nginx-abuseipdb-blacklist.conf;
-            
+
             ......
 ```
-8. Test the Nginx configuration, "sudo nginx -t" 
+8. Test the Nginx configuration, "sudo nginx -t"
 
 9. If all is well, reload Nginx. On Ubuntu, "sudo service nginx reload"
 
@@ -33,6 +33,6 @@ Creates a blacklist file for use in your Nginx configuration. Please see www.abu
 
 1. Run the script using sudo or change to the root user and run the script, "php abuseipdb-blacklist-create.php"
 
-2. Test the Nginx configuration, "sudo nginx -t" 
+2. Test the Nginx configuration, "sudo nginx -t"
 
 3. If all is well, reload Nginx. On Ubuntu, "sudo service nginx reload"

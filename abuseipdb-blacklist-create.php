@@ -22,7 +22,7 @@ if (isset($object -> errors) || !$object || empty($object)) {
 
 $response = null;
 foreach ($object -> data as $key => $values) {
-    if ($values -> abuseConfidenceScore >= ABUSE_IP_DB_CONFIDENCE_LIMIT) {
+    if ($values -> abuseConfidenceScore >= ABUSE_CONFIDENCE_SCORE) {
         $response .= "deny ".$values -> ipAddress.";".PHP_EOL;
     }
 }
