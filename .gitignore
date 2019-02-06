@@ -1,2 +1,3 @@
 config.php
 nginx-abuseipdb-blacklist.conf
+abuseipdb-data.json
