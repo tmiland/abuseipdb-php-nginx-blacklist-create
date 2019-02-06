@@ -31,3 +31,4 @@ unlink(__DIR__."/abuseipdb-data.json");
 print PHP_EOL;
 print PHP_EOL;
 print "You can now test the configuration: nginx -t".PHP_EOL;
+print "You will also want to reload nginx. For example, sudo service nginx reload on Ubuntu.".PHP_EOL;
