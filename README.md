@@ -18,8 +18,12 @@ Creates a blacklist file for use in your Nginx configuration. Please see www.abu
 7. Add the following line near the top of the http section in your nginx.conf file:
 ```
     http {
-            *## Block spammers and other unwanted visitors  ##
-            include abuseipdb-php-nginx-blacklist-create/nginx-abuseipdb-blacklist.conf;*
+            .....
+            
+            ## Block spammers and other unwanted visitors  ##
+            include abuseipdb-php-nginx-blacklist-create/nginx-abuseipdb-blacklist.conf;
+            
+            ......
 ```
 8. Test the Nginx configuration, "sudo nginx -t" 
 
