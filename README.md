@@ -1,5 +1,5 @@
 # abuseipdb-php-nginx-blacklist-create
-Creates a blacklist file for use in your Nginx configuration.
+Creates a blacklist file for use in your Nginx configuration. Please see www.abuseipdb.com for API request limits. The "Free" account allows five requests/day.
 
 ## Installation
 
