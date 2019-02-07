@@ -21,9 +21,11 @@ if (isset($object -> errors) || !$object || empty($object)) {
 }
 
 $response = null;
+$count = 0;
 foreach ($object -> data as $key => $values) {
     if ($values -> abuseConfidenceScore >= ABUSE_CONFIDENCE_SCORE) {
         $response .= "deny ".$values -> ipAddress.";".PHP_EOL;
+        $count++;
     }
 }
 
@@ -32,5 +34,6 @@ file_put_contents(__DIR__."/nginx-abuseipdb-blacklist.conf", $response);
 unlink(__DIR__."/abuseipdb-data.json");
 print PHP_EOL;
 print PHP_EOL;
+print "Added ".$count." ip addresses to your blacklist.".PHP_EOL;
 print "You can now test the configuration: nginx -t".PHP_EOL;
 print "You will also want to reload nginx. For example, sudo service nginx reload on Ubuntu.".PHP_EOL;
