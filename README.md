@@ -9,7 +9,7 @@ Creates a blacklist file for use in your Nginx configuration. Please see www.abu
 
 3. cd into abuseipdb-php-nginx-blacklist-create/ directory.
 
-4. Copy config.dist.php to config.php and insert your key into the define('ABUSE_IP_DB_KEY', '<KEY HERE>'); block. Set the define('ABUSE_CONFIDENCE_SCORE', 80); to your liking.
+4. Copy config.dist.php to config.php and insert your key into the define('ABUSE_IP_DB_KEY', '<KEY HERE>'); block. Set the define('ABUSE_CONFIDENCE_SCORE', 80); to your liking. AbuseIPDB recommends somewhere between 75-100%.
 
 5. Run the script using sudo or change to the root user and run the script, "php abuseipdb-blacklist-create.php"
 
