@@ -21,6 +21,11 @@ if (isset($object -> errors) || !$object || empty($object)) {
 }
 
 $response = null;
+
+if (file_exists(__DIR__."/local-blacklist.conf") && is_file(__DIR__."/local-blacklist.conf")) {
+    $response = file_get_contents(__DIR__."/local-blacklist.conf").PHP_EOL;
+}
+
 $count = 0;
 foreach ($object -> data as $key => $values) {
     if ($values -> abuseConfidenceScore >= ABUSE_CONFIDENCE_SCORE) {

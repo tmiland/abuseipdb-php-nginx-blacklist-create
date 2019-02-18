@@ -29,6 +29,14 @@ Creates a blacklist file for use in your Nginx configuration. Please see www.abu
 
 9. If all is well, reload Nginx. On Ubuntu, "sudo service nginx reload"
 
+## Adding Your Own Blacklist IPs
+
+1. Copy local-blacklist.conf.dist to local-blacklist.conf.
+
+2. Add your deny lines to local-blacklist.conf. For example, "deny 00.00.00.00;"
+
+3. Run the abuseipdb-blacklist-create.php file. "php abuseipdb-blacklist-create.php"
+
 ## Updating the Blacklist
 
 1. Run the script using sudo or change to the root user and run the script, "php abuseipdb-blacklist-create.php"
