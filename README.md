@@ -3,11 +3,13 @@ Creates a blacklist file for use in your Nginx configuration. Please see www.abu
 
 **NOTES:**
 
-- AbuseIpDB returns a maximum of 10,000 IP addresses with a basic user account.
+- [AbuseIpDB](https://www.abuseipdb.com "AbuseIpDB") returns a maximum of 10,000 IP addresses with a basic user account.
 
-- AbuseIpDB allows a maximum of 5 daily requests to their API.
+- [AbuseIpDB](https://www.abuseipdb.com "AbuseIpDB") allows a maximum of 5 daily requests to their API.
 
 - I have NOT tested this script using an account upgrade.
+
+- [AbuseIpDB API documentation can be found here.](https://docs.abuseipdb.com/#blacklist-endpoint "AbuseIpDB API Documentation")
 
 ## Installation
 
