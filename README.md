@@ -1,6 +1,14 @@
 # abuseipdb-php-nginx-blacklist-create
 Creates a blacklist file for use in your Nginx configuration. Please see www.abuseipdb.com for API request limits. The "Free" account allows five requests/day. **All of the commands listed below require sudo or root privileges.**
 
+**NOTES:**
+
+- AbuseIpDB returns a maximum of 10,000 IP addresses with a basic user account.
+
+- AbuseIpDB allows a maximum of 5 daily requests to their API.
+
+- I have NOT tested this script using an account upgrade.
+
 ## Installation
 
 1. Sign up for an AbuseIPDB account to get your API key: www.abuseipdb.com. The API key used for this script is the "APIv2" key.
